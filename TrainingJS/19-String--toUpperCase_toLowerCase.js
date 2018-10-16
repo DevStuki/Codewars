@@ -18,12 +18,13 @@ console.log(result2);
 //output:
 //This is an example.
 
-var str3="this is an example.";
-var words3=str3.split(" "); //공백을 기준으로 잘라서
-for (var i=0;i<words3.length;i++){
-  words3[i]=words3[i][0].toUpperCase()+words3[i].slice(1); //첫글자만 대문자로 만든 후 다시 합친다.
+var str="this is an example.";
+var words=str.split(" ");
+for (var i=0;i<words.length;i++){
+  words[i]=words[i][0].toUpperCase()+words[i].slice(1);
 }
-console.log(words3.join(" "));
+console.log(words.join(" "));
+
 //output:
 //This Is An Example.
 
@@ -71,20 +72,14 @@ A small hint: The first conversion of the entire string will make the code easie
 function alienLanguage(str){
     var word = str.split(" ");
     for(let i = 0; i < word.length; i++){
-        // var front = word[i].slice(0, word[i].length-1).toUpperCase();
-        // console.log(front);
-        // var end = word[i][word[i].length-1].toLowerCase();
-        // console.log(end);
-        // word[i] = front + end;
-        // console.log(word[i]);
-        word[i] = word[i].slice(0, word[i].length-1).toUpperCase() + word[i][word[i].length-1].toLowerCase();
+        word[i] = word[i].slice(0, word[i].length-1).toUpperCase() 
+                        + word[i][word[i].length-1].toLowerCase();
     }
     return word.join(" ");
 }
 
 //Best Practice
 //RegExp를 사용하면 더 간단하게 할 수 있다. (아직은 어렵다.)
-//인덱스가 -1이면 끝에서 첫번째인가보다!
 function alienLanguage(str){
     return str.replace(/\w+/g, w.slice(0,-1).toUpperCase() + w.slice(-1).toLowerCase());
 }

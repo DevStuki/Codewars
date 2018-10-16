@@ -128,9 +128,6 @@ question 3 should answer:"Apple core"
 function topSecret(str){
     var chars = str.split("");
     for (let i = 0; i < chars.length; i++){
-        var pattern = /^[a-zA-Z0-9]*$/
-        if(!pattern.test(chars[i])) continue;
-
         let char = chars[i].charCodeAt();
         if(char < ("A").charCodeAt() || (char < ("a").charCodeAt() && char > ("Z").charCodeAt()) ||  ("z").charCodeAt() < char) continue;
 
