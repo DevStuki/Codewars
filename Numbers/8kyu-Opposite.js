@@ -14,9 +14,9 @@ function opposite(number) {
 }
 
 //Best Practice
-// function opposite(number) {
-//     return(-number);
-// }
+function opposite(number) {
+    return(-number);
+}
 
 console.log(opposite(1));
 console.log(opposite(14));
