@@ -10,3 +10,13 @@ The parameter of accum is a string which includes only letters from a..z and A..
 
 
  */
+
+function accum(s) {
+	// your code
+}
+
+console.log(accum("ZpglnRxqenU"));
+console.log(accum("NyffsGeyylB"));
+console.log(accum("MjtkuBovqrU"));
+console.log(accum("EvidjUnokmM"));
+console.log(accum("HbideVbxncC"));
